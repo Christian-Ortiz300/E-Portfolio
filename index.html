@@ -4,19 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Portfolio</title>
+
+
+    <!--Box Icon Usage-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!--Header-->
-    <header>
+    <header class = "header"> 
+        <a href="#" class = "logo"> Portfolio:</a>
 
         <nav class = "navbar">
-            <a href="#">Home</a> 
-            <a href="#">Home</a> 
-            <a href="#">Home</a> 
-            <a href="#">Home</a> 
-
+            <a href="#home" class = "active-link">Home</a> 
+            <a href="#about">About</a> 
+            <a href="#services">Services</a> 
+            <a href="#projects">Projects</a> 
+            <a href="#contact">Contact</a> 
         </nav>
+      
+        <!--Dark Mode icon-->
+        <div class = "bx bx-moon" id="darkMode-icon"></div>
     </header>
+
+    <!--Home Section-->
+    <section class="home" id = "home">
+        <div class = "home-content">
+            <h3>Hello, I am</h3>
+            <h2>Christian Ortiz</h2>
+            <p>I'm currently a <b class = "highlight">sophomore</b> studying computer science with a strong passion for web building. 
+                I am continuosly learning and mastering new programming languages and frameworks. </p>
+            <div class = "social-media">
+                <a href="#"><i class='bx bxl-instagram-alt' ></i></a>
+                <a href="#"><i class='bx bxl-linkedin-square' ></i></a>
+                <a href="#"><i class='bx bxl-github' ></i></a>
+            </div>
+
+            <a href="#" class = "btn">Download CV</a>
+        </div>
+    </section>
+
+    <script src = "js/script.js"></script>
 </body>
 </html>
