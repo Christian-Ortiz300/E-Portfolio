@@ -22,6 +22,7 @@
 /* font size for the entire hmtl file*/ 
 html{ 
     font-size: large;
+    overflow-x: hidden;
 }
 /*Style'sboth background and text color for whole document. */
 body{ 
@@ -37,9 +38,12 @@ body{
     left: 0; 
     width: 100%; 
     padding: 2rem 7%; 
-    background: black;
+    background: transparent;
+    transition: .3s
 }
-
+.header.sticky::before{
+    background: var(--bg-color);
+}
 .logo{ 
     font-size: 2.5rem;
     color: var(--main-color); 
@@ -49,10 +53,17 @@ body{
 }
 .navbar a{ 
     position: relative;
-    color: var(--white-color);
+    color: var(--main-color);
     font-size: 1.5rem;
     font-weight: 500;
     margin-right: 3rem; 
+}
+.header.sticky .navbar a{ 
+    color: var(--text-color); 
+
+}
+.header.sticky .navbar a.active{ 
+    color: var(--text-color);
 }
 .navbar a.active-link::before{ 
     content: '';
@@ -63,10 +74,17 @@ body{
     height: 2px; 
     background: var(--white-color);
 }
+.header.sticky .navbar a::before{ 
+    background: var(--main-color);
+    opacity: .7;
+}
 #darkMode-icon{ 
     font-size: 2rem;
     color: var(--white-color);
     cursor: pointer;
+}
+.header.sticky #darcMode-icon{ 
+    color: var(--text-color);
 
 }
 section{ 
@@ -84,9 +102,9 @@ section{
     font-size: 50px;
     line-height: .3;
 }
-.home-content h2{ 
+.home-content h1{ 
     font-size: 100px ;
-    font-weight: 600;
+    font-weight: 400;
 }
 .home-content p{ 
     font-size: 26px;
@@ -122,4 +140,45 @@ section{
 .btn:hover{ 
     background: transparent;
     color: var(--main-color)
+}
+span{ 
+    color: var(--main-color);
+}
+.about{ 
+    display: flex; 
+    justify-content:center;
+    align-items: center;
+    gap: 4rem; 
+}
+.about-img img{ 
+    width: 40vw;
+}
+.heading{ 
+    font-size: 64px;
+    text-align: center;
+}
+.about-content h2{ 
+    text-align:left; 
+    line-height: 1;
+}
+.about-content h3{ 
+    font-size: 32px;
+}
+.about-content p{ 
+    font-size: 24px;
+    margin: 2rem 0 3rem; 
+}
+.projects .project-content{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 32px; 
+}
+projects-content .project-box{
+    flex: 1 1 30rem; 
+    background: var(--bg-color);
+    padding: 24px 16px 48px; 
+    border-radius: 32px;
+
 }
