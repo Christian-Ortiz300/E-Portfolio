@@ -1,5 +1,4 @@
 /*Sticky navbar */
-
 window.onscroll = () => { 
 
 let header = document.querySelector('.header'); 
