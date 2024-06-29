@@ -14,11 +14,17 @@
 
 /*Base case for colors that I plan to use within the portfolio*/
 :root { 
- --bg-color: white; 
- --text-color: black; 
- --main-color: maroon; 
- --white-color: white; 
+ --bg-color: #fdfdfd; 
+ --text-color: #0b061f; 
+ --main-color: #13bbff; 
+ --white-color: #fdfdfd; 
 }
+/*dark mode changes*/ 
+.dark-mode{ 
+    --bg-color: #0b061f; 
+    --text-color: #fdfdfd; 
+}
+
 /* font size for the entire hmtl file*/ 
 html{ 
     font-size: large;
@@ -26,7 +32,7 @@ html{
 }
 /*Style'sboth background and text color for whole document. */
 body{ 
-    background: grey;
+    background: var(--bg-color);
     color: var(--text-color); 
 }
 .header{ 
@@ -53,7 +59,7 @@ body{
 }
 .navbar a{ 
     position: relative;
-    color: var(--white-color);
+    color: var(--text-color);
     font-size: 1.5rem;
     font-weight: 500;
     margin-right: 3rem; 
@@ -72,7 +78,7 @@ body{
     bottom: 0px;
     width: 100%;
     height: 2px; 
-    background: var(--white-color);
+    background: var(--text-color);
 }
 .header.sticky .navbar a::before{ 
     background: var(--main-color);
@@ -80,7 +86,7 @@ body{
 }
 #darkMode-icon{ 
     font-size: 2rem;
-    color: var(--white-color);
+    color: var(--text-color);
     cursor: pointer;
 }
 .header.sticky #darcMode-icon{ 
@@ -206,7 +212,7 @@ span{
 }
 .skill-content .skill-box{ 
     padding: 1rem; 
-    color: var(--white-color);
+    color: var(--main-color);
     cursor: pointer;
 }
 .skill-box:hover > .skill-title:after, 
@@ -253,7 +259,7 @@ span{
     height: 90px;
     position: relative; 
     border-radius: 45px;
-    background: var(--bg-color);
+    background: var(--main-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -273,7 +279,7 @@ span{
     */
 }
 .skill-title h3{
-    color: var(--white-color);
+    color: var(--text-color);
     margin-top: 0.5rem; 
 
 }
@@ -293,36 +299,37 @@ span{
         grid-template-columns: 1fr;
     }
 }
-
-.projects{ 
+/*start of the coursework section*/
+.courses{ 
     min-height: auto;
     padding-bottom: 7rem; 
 }
-.projects h2{ 
+.courses h2{ 
     margin-bottom: 5rem;
     text-align: center;
     padding: 1rem; 
     position: relative; 
+
 }
 
-.projects h2:after{
+.courses h2:after{
     content: '';
     position: absolute;
     bottom: 0;
     left: 50%; 
     transform: translateX(-50%);
-    height: 100px; 
+    height: 4px; 
     width: 500px;
-    background-color: var(--bg-color);
+    background-color: #13bbff;
 }
-.projects .project-content{ 
+.courses .course-content{ 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 2rem; 
 }
-.project-content .project-box{
+.course-content .course-box{
     flex: 1 1 25rem; 
     background: var(--bg-color);
     padding: 3rem 2rem 4rem; 
@@ -333,23 +340,23 @@ span{
     border-bottom: .6rem solid var(--main-color);
     transition: .5s ease
 }
-.project-content .project-box:hover{ 
+.course-content .course-box:hover{ 
     box-shadow: 0 .1rem 2rem grey;
     transform: scale(1.02);
 }
-.project-box i{ 
+.course-box i{ 
     font-size: 7rem; 
     color: var(--main-color);
 }
-.project-box h3{ 
+.course-box h3{ 
     font-size: 1.5rem;
     transition: .5s ease;
 }
-.project-box:hover h3{ 
+.course-box:hover h3{ 
     color: var(--main-color);
 }
 
-.project-box p{ 
+.course-box p{ 
     font-size: 1.5rem;
     margin: 1rem 0 5rem; 
 }
