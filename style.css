@@ -116,6 +116,7 @@ section{
     height: 50px;
     background-color: transparent;
     border-radius: 50%;
+    z-index: 1;
     border: 6px solid rgba(12, 16, 204, 0.616);
 }
 .content-box div:nth-child(1){ 
@@ -390,9 +391,10 @@ span{
 .courses{ 
     min-height: auto;
     padding-bottom: 7rem; 
+    padding-top: 10rem;
 }
 .courses h2{ 
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     text-align: center;
     padding: 1rem; 
     position: relative; 
@@ -414,17 +416,19 @@ span{
     align-items: center;
     flex-wrap: wrap;
     gap: 2rem; 
+    z-index: 2;
 }
 .course-content .course-box{
-    flex: 1 1 25rem; 
+    flex: 1 1 20rem; 
     background: var(--bg-color);
-    padding: 3rem 2rem 4rem; 
+    padding: 3rem 2rem 3rem;
     border-radius: 2rem;
     text-align: center;
     box-shadow: 0 .1rem .5rem grey;
     border-top: .6rem solid var(--main-color);
     border-bottom: .6rem solid var(--main-color);
-    transition: .5s ease
+    transition: .5s ease; 
+    z-index: 2;
 }
 .course-content .course-box:hover{ 
     box-shadow: 0 .1rem 2rem grey;
@@ -435,7 +439,7 @@ span{
     color: var(--main-color);
 }
 .course-box h3{ 
-    font-size: 1.5rem;
+    font-size: 2rem;
     transition: .5s ease;
 }
 .course-box:hover h3{ 
@@ -444,7 +448,11 @@ span{
 
 .course-box p{ 
     font-size: 1.5rem;
-    margin: 1rem 0 5rem; 
+    margin: 1rem 0 1rem; 
+}
+
+.courses .animation .content-box{ 
+   
 }
 
 /*Projects Section*/
@@ -473,6 +481,7 @@ span{
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     gap: 2.5rem;
+    z-index: 2;
 
 }
 .projects-container .projects-box{ 
@@ -557,11 +566,13 @@ span{
     margin: 1rem ; 
     text-align: center;
     margin-bottom: 3rem;
+    z-index: 2;
 }
 .contact form .input-box{ 
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap; 
+    z-index: 2;
 }
 .contact form .input-box input, 
 .contact form textarea{ 
@@ -573,12 +584,14 @@ span{
     border-radius: .8rem;
     margin: .7rem 0; 
     box-shadow: 0 .1rem .5rem var(--shadow-color);
+    z-index: 2;
 }
 .contact form .input-box input{ 
-     width: 49%
+    width: 49%;
 }
 .contact form textarea{ 
     resize: none;
+    z-index: 2;
 }
 .contact form .btn{ 
     margin-top: 2rem;
