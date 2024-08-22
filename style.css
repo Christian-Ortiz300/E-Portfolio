@@ -95,6 +95,11 @@ body{
     color: var(--text-color);
     opacity: 1;
 }
+#menu-icon{ 
+    font-size: 2rem; 
+    color: var(--text-color);
+    display: none;
+}
 section{ 
     min-height: 100vh; 
     padding: 10rem 7% 2rem; 
@@ -451,10 +456,6 @@ span{
     margin: 1rem 0 1rem; 
 }
 
-.courses .animation .content-box{ 
-   
-}
-
 /*Projects Section*/
 
 .projects{ 
@@ -559,8 +560,6 @@ span{
     width: 400px;
     background-color: var(--main-color);
 }
-    
-
 .contact form{ 
     justify-content: center;
     margin: 1rem ; 
@@ -572,12 +571,12 @@ span{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap; 
-    z-index: 2;
 }
 .contact form .input-box input, 
 .contact form textarea{ 
     width: 100%; 
     padding: 2rem; 
+    position: relative;
     font-size: 1.6rem;
     color: var(--text-color);
     background:var(--bg-color);
@@ -590,8 +589,7 @@ span{
     width: 49%;
 }
 .contact form textarea{ 
-    resize: none;
-    z-index: 2;
+    resize: none; 
 }
 .contact form .btn{ 
     margin-top: 2rem;
@@ -610,3 +608,11 @@ span{
     color: var(--white-color); 
 }
 
+
+/*Adjustments*/ 
+@media (max-width: 1200px) {
+    html{ 
+        font-size: 55%;
+    }
+    
+}
